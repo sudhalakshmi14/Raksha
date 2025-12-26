@@ -1,0 +1,146 @@
+
+.sos-animated-button {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle at center, #ff2a2a, #c80000);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  user-select: none;
+
+  /* glow */
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+
+  /* animation */
+  animation: sosPulse 1.6s infinite ease-in-out;
+
+  /* click animation */
+  transition: transform 0.2s ease;
+}
+
+/* remove weird duplicate shapes */
+.sos-animated-button::before,
+.sos-animated-button::after {
+  content: none;
+}
+
+/* click shrink effect */
+.sos-animated-button:active {
+  transform: scale(0.92);
+}
+
+/* pulse keyframes */
+@keyframes sosPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 28px rgba(255, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+.sos-page-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.sos-animated-button {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ff2a2a, #c80000);
+  color: white;
+  font-size: 34px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  animation: sosPulse 1.6s infinite;
+}
+/* ---- COLOR ONLY FOR THIS PAGE ---- */
+
+.sos-page .option.fire {
+  background: #ffedd5;
+  border: 2px solid #fb923c;
+}
+
+.sos-page .option.police {
+  background: #ede3d3;
+  border: 2px solid #b08855;
+}
+
+.sos-page .option.ambulance {
+  background: #dbeafe;
+  border: 2px solid #3b82f6;
+}
+
+.sos-page .option.other {
+  background: #ede9fe;
+  border: 2px solid #8b5cf6;
+}
+
+/* SELECTED STATE HIGHLIGHT */
+.sos-page .option.selected {
+  transform: scale(1.1);
+}
+
+/* TEXT COLOR CONTRAST */
+.sos-page .option p {
+  font-weight: 600;
+}
+
+.option.selected {
+  outline: 3px solid #1f2fd4;
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
+.service-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.2s ease;
+}
+
+/* 🚑 Ambulance – BLUE */
+.service-btn.ambulance {
+  background: #3b82f6;
+}
+
+/* 👮 Police – BROWN */
+.service-btn.police {
+  background: #b08855;
+}
+
+/* 🔥 Fire Engine – ORANGE */
+.service-btn.fire {
+  background: #ff7a21;
+}
+
+/* Selected effect — keeps color */
+.service-btn.active {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}

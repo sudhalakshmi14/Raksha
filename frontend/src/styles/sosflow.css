@@ -1,0 +1,133 @@
+.sos-animated-button {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  
+  background: radial-gradient(circle at center, #ff2a2a, #d40000);
+  color: white;
+  font-size: 34px;
+  font-weight: 900;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  user-select: none;
+
+  box-shadow:
+    0 0 0 10px rgba(255, 0, 0, 0.15),
+    0 0 30px rgba(255, 0, 0, 0.6);
+
+  animation: sosPulse 1.6s infinite ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sos-animated-button:active {
+  transform: scale(0.92);
+  box-shadow:
+    0 0 0 5px rgba(255, 0, 0, 0.3),
+    0 0 15px rgba(255, 0, 0, 0.9);
+}
+
+@keyframes sosPulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(255, 0, 0, 0.6),
+      0 0 25px rgba(255, 0, 0, 0.9);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 25px rgba(255, 0, 0, 0),
+      0 0 25px rgba(255, 0, 0, 0.4);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(255, 0, 0, 0),
+      0 0 25px rgba(255, 0, 0, 0.8);
+  }
+}
+.sos-card-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centers horizontally */
+  justify-content: center; /* centers vertically if needed */
+  gap: 16px;
+}
+.service {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 14px;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.service {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 14px;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  transition: 0.25s ease;
+}
+
+/* COLORS */
+/* 🚑 Ambulance – BLUE */
+.ambulance-btn {
+  background: #3b82f6;
+}
+
+/* 👮 Police – BROWN */
+.police-btn {
+  background: #b08855;
+}
+
+/* 🔥 Fire – ORANGE */
+.fire-btn {
+  background: #ff7a21;
+}
+
+/* when selected — darker highlight + scale */
+.active {
+  filter: brightness(0.9);
+  transform: scale(1.02);
+}
+
+/* green alert box */
+.success-alert {
+  margin-top: 18px;
+  background: #22c55e;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  animation: pop 0.3s ease;
+}
+
+/* little popup animation */
+@keyframes pop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.option.selected {
+  outline: 3px solid #1f2fd4;
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
